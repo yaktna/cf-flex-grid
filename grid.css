@@ -1,0 +1,66 @@
+.grey{
+  background-color: aliceblue;
+  padding: 20px;
+  border: 3px solid #000;
+}
+
+body{
+  margin: 0;
+  display: grid;
+  gap: 30px;
+  grid-template-rows: 150px 150px 150px 300px 300px;
+  grid-template-areas: 
+  "header header header header header"
+  "logo headbar headbar headbar headbar"
+  "pills pills pills pills pills"
+  "main main main first first"
+  "main main main second second";
+}
+
+header{
+  background-color: cadetblue;
+  grid-area: header;
+}
+
+.first{
+  grid-area: logo;
+}
+.first p{
+  z-index: 10;
+  position: relative;
+}
+
+.second{
+  height: 100px;
+  grid-area: headbar;
+  align-self: center;
+  row-gap: 30px;
+}
+
+.pills-container{
+  background-color: azure;
+  grid-area: pills;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pill{
+  flex-basis: 150px;
+}
+
+.main{
+  grid-area: main;
+}
+
+.card{
+  height: 100%;
+}
+
+.card.first{
+  grid-area: first;
+}
+
+.card.second{
+  grid-area: second;
+}
